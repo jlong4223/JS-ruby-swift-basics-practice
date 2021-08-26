@@ -402,6 +402,11 @@ const stolenItems = [
     value: 40.0,
     qty: 1,
   },
+  {
+    name: "park tool multi tool",
+    value: 15.0,
+    qty: 1,
+  },
 ];
 
 const getTotalOfTotals = (stolenItems) => {
