@@ -372,7 +372,7 @@ console.log("v2: ", evenLastTwo([1, 2, 3, 4]));
 // ==========================================
 // stolen items array of objects and total value
 
-let total = (value, quanity) => {
+let findTotal = (value, quanity) => {
   return value * quanity;
 };
 
@@ -381,37 +381,32 @@ const stolenItems = [
     name: "warby parker fletcher sunglasses",
     value: 95.0,
     qty: 1,
-    total: total(95.0, 1),
   },
   {
     name: "iPhone chargers",
     value: 5.0,
     qty: 2,
-    total: total(5.0, 2),
   },
   {
     name: "aux-cord lightning cable",
     value: 10.0,
     qty: 1,
-    total: total(10.0, 1),
   },
   {
     name: "emergency car kit",
     value: 45.0,
     qty: 1,
-    total: total(45.0, 1),
   },
   {
     name: "nike sweatshirt",
     value: 40.0,
     qty: 1,
-    total: total(40.0, 1),
   },
 ];
 
 const getTotalOfTotals = (stolenItems) => {
   const getTotals = stolenItems.map((item) => {
-    return item.total;
+    return findTotal(item.value, item.qty);
   });
 
   console.log("totals: ", getTotals);
